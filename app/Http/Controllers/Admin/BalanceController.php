@@ -11,12 +11,16 @@ use App\Models\Historic;
 
 class BalanceController extends Controller
 {
+    private $totalPage = 3;
+
     public function index()
     {
         $balance = auth()->user()->balance;
         $amount = $balance ? $balance->amount : 0;
+
         return view('admin.balance.index', compact('amount'));
     }
+
 
     public function deposit()
     {

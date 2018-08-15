@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
+use App\User;
 
 class Historic extends Model
 {
